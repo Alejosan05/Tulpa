@@ -16,3 +16,12 @@ def menu():
     print("5. Contar una misma palabra para un comentario")
     print("6. Resumen de solo un comentario")
     print("7. Salir")
+
+def opciones_menu():
+    opciones =""
+    while opciones != 0:
+        menu()
+        opciones = input("Escoja una de las opciones dichas:")
+        if opciones == "1":
+            registrar_comentario()
+opcion_menu()
