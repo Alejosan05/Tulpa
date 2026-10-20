@@ -9,6 +9,33 @@ def menu():
     print("6. Resumen de solo un comentario")
     print("7. Salir")
 
+def opciones_menu():
+    opciones =""
+    while opciones != 0:
+        menu()
+        opciones = input("Escoja una de las opciones dichas:")
+        if opciones == "1":
+            registrar_comentario()
+        elif opciones == "2":
+            mostrar_comentarios()
+        elif opciones == "3":
+            buscar_comentario()
+        elif opciones == "4":
+            cantidad_palabras()
+        elif opciones == "5":
+            contar_palabra()
+        elif opciones == "6":
+            resumen_comentario()
+        elif opciones =="7":
+            print("Gracias por contarnos sus comentarios de tus cursos")
+        else :
+            print("Opcion no valida, vuelvga a intentar")
+
+
+
+
+
+
 def registrar_comentario():
  texto = input("Escriba el comentario: ").strip()
  if texto != "":
