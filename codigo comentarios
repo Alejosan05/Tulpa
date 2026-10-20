@@ -48,8 +48,9 @@ def mostrar_comentarios():
    if len(comentarios) == 0:
       print("No hay comentarios registrados.")
    else:
-    for i in range(len(comentarios)):
-     print(i + 1, comentarios[i])
+        print("Comentarios")
+        for i in range(len(comentarios)):
+            print(i + 1, comentarios[i])
 
 def buscar_comentario():
   
