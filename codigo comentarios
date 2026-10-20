@@ -1,2 +1,10 @@
-dasdasda da s 
+comentarios = []
+
+def registrar_comentario():
+ texto = input("Escriba el comentario: ").strip()
+ if texto != "":
+  comentarios.append(texto)
+  print("Comentario registrado.")
+ else:
+  print("El comentario no puede estar vacio.")
 
