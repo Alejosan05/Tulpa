@@ -63,9 +63,20 @@ def opciones_menu():
         if opciones == "1":
             registrar_comentario()
 
-def buscar_comentarios():
-   buscartexto = input("Que comentario desea buscar: ").strip().lower()
-   if buscartexto in comentarios:
-      print(f"La palabra {comentarios} si se encuentra en el texto")
-   else:
-      (f"No hay palabra {comentarios} relacionada")
+def contar_palabra():
+    if len(comentarios) == 0:
+        print("No hay comentarios registrados.")
+        return
+    buscartexto = input("Que comentario desea buscar: ").strip().lower()
+    veces_encontrada = 0
+    encontrado = False
+    for c in comentarios:
+        c_lower = c.lower()
+        coincidencias = c_lower.split().count(buscartexto)
+        if coincidencias > 0:
+            veces_encontrada += coincidencias
+            encontrado = True
+    if encontrado:
+        print(f"El numero de veces que aparece la palabra es: {veces_encontrada}")
+    else:
+        print("No se encontró ningún comentario relacionado.")
