@@ -64,6 +64,11 @@ def buscar_comentario():
     if not encontrado:
         print("No se encontró ningún comentario relacionado.")
 
+def cantidad_palabras():
+    for comentarios in comentarios:
+       cantidad = len(comentarios.split())
+       print(f"Comentarios{comentarios}, cantidad de palabras {cantidad}")
+
 def opciones_menu():
     opciones =""
     while opciones != 0:
