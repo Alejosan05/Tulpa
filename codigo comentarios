@@ -52,8 +52,17 @@ def mostrar_comentarios():
         for i in range(len(comentarios)):
             print(i + 1, comentarios[i])
 
-def buscar_comentario():
-  
+def buscar_comentario():  
+    buscartexto = input("Que comentario desea buscar: ").strip().lower()
+    encontrado = False
+    
+    for c in comentarios:
+        if buscartexto in c.lower():
+            print(f"Se encontró el comentario: '{c}'")
+            encontrado = True
+            
+    if not encontrado:
+        print("No se encontró ningún comentario relacionado.")
 
 def opciones_menu():
     opciones =""
