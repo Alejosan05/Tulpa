@@ -8,3 +8,11 @@ def registrar_comentario():
  else:
   print("El comentario no puede estar vacio.")
 
+def menu():
+    print("1. Ingrese un comentario sobre algun curso suyo")
+    print("2. Resumen de comentarios registrados")
+    print("3. Busqueda de comentario")
+    print("4. Visualizar cantidad de palabras para cada comentario")
+    print("5. Contar una misma palabra para un comentario")
+    print("6. Resumen de solo un comentario")
+    print("7. Salir")
